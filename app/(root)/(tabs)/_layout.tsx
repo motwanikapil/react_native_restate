@@ -1,7 +1,7 @@
 import icons from "@/constants/icons";
 import { Tabs } from "expo-router";
 import React from "react";
-import { Image, View } from "react-native";
+import { Image, Text, View } from "react-native";
 
 const TabIcon = ({
   focused,
@@ -19,6 +19,11 @@ const TabIcon = ({
       resizeMode="contain"
       className="size-6"
     />
+    <Text
+      className={`${focused ? "text-primary-300 font-rubik-medium" : "text-black-200 font-rubik"} text-xs w-full text-center mt-1`}
+    >
+      {title}
+    </Text>
   </View>
 );
 
